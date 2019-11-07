@@ -25,50 +25,10 @@
 }
 
 .active-button {
-  background-color: rgb(255,153,0)!important;
+  background-color: rgb(255,153,0);
 }
 
 .notactive-button {
   background-color: rgb(0,123,255);
 }
-
-.btn.disabled, .btn:disabled {
-    display: none!important;
-
-}
-
-.steps-progressbar > ul > li.active-go:before {
-    margin-top: 0;
-    margin-bottom: 10px;
-    width: 50px;
-    height: 50px;
-}
-.steps-progressbar > ul > li.active-go:before, .steps-progressbar > ul > li.previous:before {
-    border-color: #00b0f0;
-    background-color: #00ff47;
-}
-
-.steps-progressbar > ul > li.active-stop:before {
-    margin-top: 0;
-    margin-bottom: 10px;
-    width: 50px;
-    height: 50px;
-}
-.steps-progressbar > ul > li.active-stop:before, .steps-progressbar > ul > li.previous:before {
-    border-color: #00b0f0;
-    background-color: red;
-}
-
-
-.active-dists {
-    background-color: rgb(255,153,0)!important;
-}
-.active-spds {
-    background-color: rgb(255,153,0)!important;
-}
-.active-techs {
-    background-color: rgb(255,153,0)!important;
-}
-
-
 
