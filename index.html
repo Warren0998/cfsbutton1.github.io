@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<center>
+<p hidden id="p1">WIRELESS FALL-OUT REPORT:
+
+ Technician Name:
+ REF ID:
+ SINR/SNR in dBm:
+ RSRP in dBm:
+ Speedtest in Mbps:
+ eNode ID:
+ SLI Latitude:
+ SLI Longitude:
+</p>
+
+<button onclick="copyToClipboard('#p1')">Copy Format</button>
+  
+</center>
+
+
+
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<textarea>");
+  var brRegex = /<br\s*[\/]?>/gi;
+  $("body").append($temp);
+  $temp.val($(element).html().replace(brRegex, "\r\n")).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
+$( "#FailCopy" ).click(function() {
+  alert("Well done! div #error-details has been copy to your clipboard, now paste it in the notepad or email!");
+});
+
+</script>
+</body>
+</html>
