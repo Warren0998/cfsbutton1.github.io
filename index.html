@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 75;min-height: 75px;max-height: 75px;">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Copy Template</title>
+    <title>Signal Parameters Calculator2</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
     <link rel="stylesheet" href="assets/css/Material-Style-Ripple-Button.css">
@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="assets/css/Steps-Progressbar.css">
 </head>
 
-<body style="background-color: rgb(0,123,255);margin-bottom: 18px;">
-    <div  onclick="copyToClipboard('#p1')" class="container text-nowrap text-center m-auto" style="margin: 12rem;padding-bottom: 19px;background-color: #f4f9ff;padding-top: 19px;"><button class="btn btn-primary" type="button">Click here to Template &gt;</button></div>
+<body style="background-color: rgb(0,123,255);margin-bottom: 18px;height: 70px;min-height: 70px;max-height: 70px;">
+    <div class="container text-nowrap text-center m-auto" style="background-color: #f4f9ff;margin: 12rem;margin-top: 20px;padding-top: 2;padding-bottom: 19px;"><button class="btn btn-primary" type="button" style="padding-top: 1;margin-top: 20px;">Click Here to Copy Template &gt;</button></div>
     <div class="container">
         <div class="steps-progressbar" style="margin-bottom: 35px;">
             <ul></ul>
@@ -24,44 +24,6 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/Material-Style-Ripple-Button.js"></script>
     <script src="assets/js/script.js"></script>
-
-    <center>
-<p hidden id="p1">WIRELESS FALL-OUT REPORT:
-
- Technician Name:
- REF ID:
- SINR/SNR in dBm:
- RSRP in dBm:
- Speedtest in Mbps:
- eNode ID:
- SLI Latitude:
- SLI Longitude:
- Time and Date:
- Last modem used:
-
-</p>  
-</center>
-
-
-
-<script>
-function copyToClipboard(element) {
-  var $temp = $("<textarea>");
-  var brRegex = /<br\s*[\/]?>/gi;
-  $("body").append($temp);
-  $temp.val($(element).html().replace(brRegex, "\r\n")).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
-
-$( "#FailCopy" ).click(function() {
-  alert("Well done! div #error-details has been copy to your clipboard, now paste it in the notepad or email!");
-});
-
-</script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/Material-Style-Ripple-Button.js"></script>
 </body>
 
 </html>
