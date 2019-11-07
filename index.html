@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Material-Style-Ripple-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
+    <div class="container cool-btn-container">
+        <div class="row">
+            <div onclick="copyToClipboard('#p1')" class="col-lg-2 d-flex flex-column py-3" style="margin:0 auto;"><button class="btn btn-primary" type="button"><strong>Click to Copy Format</strong> &gt;</button></div>
+        </div>
+    </div>
 
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
 
@@ -22,10 +32,9 @@
  eNode ID:
  SLI Latitude:
  SLI Longitude:
-</p>
-
-<button onclick="copyToClipboard('#p1')">Copy Format</button>
-  
+ Time & Date:
+ Last modem used:
+</p>  
 </center>
 
 
@@ -45,5 +54,9 @@ $( "#FailCopy" ).click(function() {
 });
 
 </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Material-Style-Ripple-Button.js"></script>
 </body>
+
 </html>
