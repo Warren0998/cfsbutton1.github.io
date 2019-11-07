@@ -1,0 +1,74 @@
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+#tech4g {
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: rgb(255,245,0);
+}
+
+.btn-group-vertical > .btn.active, .btn-group-vertical > .btn:active, .btn-group-vertical > .btn:focus, .btn-group > .btn.active, .btn-group > .btn:active, .btn-group > .btn:focus {
+  background-color: rgb(255,168,0);
+  box-shadow: rgb(255,184,0);
+}
+
+#tech4g {
+}
+
+#tech4g {
+}
+
+.active-button {
+  background-color: rgb(255,153,0)!important;
+}
+
+.notactive-button {
+  background-color: rgb(0,123,255);
+}
+
+.btn.disabled, .btn:disabled {
+    display: none!important;
+
+}
+
+.steps-progressbar > ul > li.active-go:before {
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+}
+.steps-progressbar > ul > li.active-go:before, .steps-progressbar > ul > li.previous:before {
+    border-color: #00b0f0;
+    background-color: #00ff47;
+}
+
+.steps-progressbar > ul > li.active-stop:before {
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+}
+.steps-progressbar > ul > li.active-stop:before, .steps-progressbar > ul > li.previous:before {
+    border-color: #00b0f0;
+    background-color: red;
+}
+
+
+.active-dists {
+    background-color: rgb(255,153,0)!important;
+}
+.active-spds {
+    background-color: rgb(255,153,0)!important;
+}
+.active-techs {
+    background-color: rgb(255,153,0)!important;
+}
+
+
+

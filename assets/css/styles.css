@@ -1,0 +1,30 @@
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: rgb(255,245,0);
+}
+
+.btn-group-vertical > .btn.active, .btn-group-vertical > .btn:active, .btn-group-vertical > .btn:focus, .btn-group > .btn.active, .btn-group > .btn:active, .btn-group > .btn:focus {
+  background-color: rgb(255,168,0);
+  box-shadow: rgb(255,184,0);
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255,181,38,0.5);
+}
+
+.active-dists {
+    background-color: rgb(255,153,0)!important;
+}
+.active-spds {
+    background-color: rgb(255,153,0)!important;
+}
+.active-techs {
+    background-color: rgb(255,153,0)!important;
+}

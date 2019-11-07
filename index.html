@@ -4,60 +4,131 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
+    <title>Signal Parameters Calculator</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Material-Style-Ripple-Button.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/mystyles.css">
+    <link rel="stylesheet" href="assets/css/Steps-Progressbar.css">
 </head>
 
-<body>
-    <div class="container cool-btn-container">
-        <div class="row">
-            <div onclick="copyToClipboard('#p1')" class="col-lg-2 d-flex flex-column py-3" style="margin:0 auto;"><button class="btn btn-primary" type="button"><strong>Click to Copy Format</strong> &gt;</button></div>
+<body style="background-color: rgb(0,123,255);margin-bottom: 18px;">
+    <nav class="navbar navbar-light navbar-expand-md" style="color: rgb(255,255,255);background-color: #0085ff;">
+        <div class="container-fluid"><a class="navbar-brand" href="#" style="color: rgba(255,255,255,0.9); font-weight:700;">BBCFS Calculator</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1" style="color: rgba(255,255,255,0.5);"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1" style="color: rgb(255,255,255);">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">LTE</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">DSL</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Fiber</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+<form>
+    <div class="container d-flex justify-content-center align-content-center align-self-center" style="height: 135px;background-image: url(&quot;assets/img/apartment-bed-bedroom-439227.jpg&quot;);padding-top: 15px;padding-right: 15px;padding-bottom: 15px;margin-bottom: 14px;position: relative;background-repeat: no-repeat;background-attachment: fixed;width: 100%;background-position: top;background-size: contain;top: 0;">
+        <h1 class="text-center visible" style="font-size: 40px;color: rgb(255,255,255);font-weight: 700;width: 263px;">Wireless Tech Calculator</h1>
+    </div>
+
+
+    <div class="container text-nowrap text-center m-auto" style="margin: 12rem;padding-bottom: 19px;background-color: #f4f9ff;"><input class="form-control-plaintext d-block visible" type="text" value="Wireless Technology:" readonly="" required="" style="height: 54px;font-size: 20px;text-align: center;font-weight: 700;margin-top: -16px;">
+
+        <div class="btn-group " role="group" id="techGroup"
+            style="width: 304px;height: 82px;">
+
+            <button type="radio" class="btn btn-primary techs" value="4G" onClick="techChecker(this)" data-bs-hover-animate="pulse" style="margin: 6px;width: 64px;">4G</button>
+
+            <button type="radio" class="btn btn-primary techs" value="MIMO" onClick="techChecker(this)" data-bs-hover-animate="pulse" style="margin: 6px;width: 64px;">MIMO</button>
+
+            <button type="radio" class="btn btn-primary techs" value="5G" onClick="techChecker(this)" data-bs-hover-animate="pulse" style="margin: 6px;width: 64px;">5G</button>
+
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <div class="container text-nowrap text-center m-auto" id="distGroup" style="margin: 16rem;padding-bottom: 55px;margin-bottom: 30px;height: 134px;background-color: #ebf4ff;padding-top: -2px;margin-top: -2px;margin-right: 8px;"><input class="form-control-plaintext visible" type="text" value="Cell Site Distance (meters):" readonly="" required="" style="height: 67px;font-size: 20px;text-align: center;font-weight: 700;margin-top: 0px;padding-top: 5px;">
+
+         <div class="btn-group" role="group" id="techGroup">
+            <button  class="btn distVal btn-primary dists distMimo dist4004G dist400Mimo  text-center d-inline-block flex-grow-1 flex-nowrap ml-auto text-align:center tech4g techMimo"
+            value="400"data-bs-hover-animate="pulse" type="button" style="border-radius: 100rem;background-color: #666666;width: 65px;margin: 3px;">400
+            </button>
+            <button id="dist500"  class="btn distVal btn-primary dists  text-center d-inline-block flex-grow-1 flex-nowrap ml-auto text-align:center; tech5g" value="500"data-bs-hover-animate="pulse" type="button" style="border-radius: 100rem;background-color: #666666;width: 65px;margin: 3px;">500</button>
+
+            <button  class="btn distVal btn-primary dist4004G  dists text-center d-inline-block flex-grow-1 flex-nowrap ml-auto text-align:center tech4g techMimo"
+            value="600" data-bs-hover-animate="pulse" type="button" style="border-radius: 100rem;background-color: #666666;width: 65px;margin: 3px;">600</button>
+
+            <button id="dist750" class="btn distVal btn-primary dists text-center d-inline-block flex-grow-1 flex-nowrap ml-auto text-align:center techMimo" data-bs-hover-animate="pulse" type="button" style="border-radius: 100rem;background-color: #666666;width: 65px;margin: 3px;" value="750">
+            750</button>
+
+            <button id="dist1500" class="btn distVal btn-primary dists  text-center d-inline-block flex-grow-1 flex-nowrap ml-auto text-align:center tech4g "
+            data-bs-hover-animate="pulse" type="button"  value="1500" style="border-radius: 100rem;background-color: #666666;width: 65px;padding-left: 6px;margin: 3px;margin-right: 7px;">1500</button>
+        </div>
+    </div>
+
+    <div class="container text-nowrap text-center m-auto"
+        style="margin: 12rem;padding-bottom: 20px;background-color: #f4f9ff;"><input class="form-control-plaintext visible" type="text" value="Plan Speed (mbps):" readonly="" style="height: 54px;font-size: 20px;text-align: center;font-weight: 700;margin-top: -6px;">
+        <div class="btn-group d-block" role="group" id="speedGroup"
+            style="padding: 7px;height: 72px;">
+            <button class="btn spdsVal btn-primary spds tech4g techMimo"value="5" id="sp20mb" type="button" style="margin: 1px;padding: 17px;">5 </button>
+            <button class="btn spdsVal btn-primary spds tech4g techMimo" value="10" id="sp10mb" type="button" style="margin: 1px;padding: 17px;">10 </button>
+            <button class="btn spdsVal btn-primary spds techMimo tech5g spdMimo" id="sp20mb" type="button" style="margin: 1px;padding: 17px;">20 </button>
+            <button class="btn spdsVal btn-primary spds tech5g" id="sp100mb" type="button" style="margin: 1px;padding: 17px;">50</button>
+            <button class="btn spdsVal btn-primary spds tech5g" id="sp100mb" type="button" style="margin: 1px;padding: 17px;">100</button>
+
+        </div>
+    </div>
+    <div class="container" style="background-color: #ddf2f7;margin-top: 0px;height: 203px;padding-top: 16px;"><input class="form-control-plaintext visible" type="text" value="Signal Parameters" readonly="" required="" style="height: 54px;font-size: 33px;text-align: center;font-weight: 700;">
+
+        <div class="text-center d-block flex-row align-content-center align-self-center flex-nowrap mx-auto"
+            id="signalParam" style="margin-top: 22px;">
+
+            <label class="text-center d-inline-flex justify-content-center" style="font-size: 21px; font-weight: 650;">RSRP: &nbsp;</label>
+
+                <input class="border rounded border-secondary d-inline-flex justify-content-end align-items-start" type="number" style="width: 90px;"inputmode="numeric" required maxlength="4" minlength="2"><label class="text-center d-inline-flex justify-content-center" style="font-size: 15px;font-weight: 450;">&nbsp;dBm</label>
+            </div>
 
 
+        <div class="text-center d-block flex-row align-content-center align-self-center flex-nowrap mx-auto"
+            id="signalParam">
 
-<center>
-<p hidden id="p1">WIRELESS FALL-OUT REPORT:
+            <label class="text-center d-inline-flex justify-content-center" style="font-size: 21px; font-weight: 650;">SINR:&nbsp;</label>
 
- Technician Name:
- REF ID:
- SINR/SNR in dBm:
- RSRP in dBm:
- Speedtest in Mbps:
- eNode ID:
- SLI Latitude:
- SLI Longitude:
- Time and Date:
- Last modem used:
+                <input class="border rounded border-secondary d-inline-flex justify-content-end align-items-start" type="number" style="width: 90px;margin-bottom: 31px;"
+                inputmode="numeric" required maxlength="4" minlength="0"><label class="text-center d-inline-flex justify-content-center" style="font-size: 15px;font-weight: 450;">&nbsp;dB</label>
+        </div>
 
-</p>  
-</center>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center align-content-center align-self-center mx-auto">
+        <div class="btn-group align-items-center align-content-center align-self-center" role="group">
 
 
+            <button class="btn btn-primary text-center" id="checkBtn" type="submit"  data-bs-hover-animate="pulse" style="margin: 25px;background-color: rgb(76,222,40);font-weight: 650;color: rgb(37,37,37);padding: 11px;padding-left: 34px;padding-right: 34px;">CHECK
+            </button>
 
-<script>
-function copyToClipboard(element) {
-  var $temp = $("<textarea>");
-  var brRegex = /<br\s*[\/]?>/gi;
-  $("body").append($temp);
-  $temp.val($(element).html().replace(brRegex, "\r\n")).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
+            
+            <button class="btn btn-primary text-center align-items-center btnClr "  data-bs-hover-animate="pulse" onclick="enableBtn()" id="clearBtn" type="button" style="background-color: rgb(255,199,0);font-weight: 650;color: rgb(58,58,58);padding-right: 34px;padding-left: 34px;padding-top: 11px;padding-bottom: 10px;margin-right: 26px;">CLEAR
+            </button>
 
-$( "#FailCopy" ).click(function() {
-  alert("Well done! div #error-details has been copy to your clipboard, now paste it in the notepad or email!");
-});
+        </div>
+    </div>
 
-</script>
+</form>
+    <div class="container">
+        <div class="steps-progressbar" style="margin-bottom: 35px;">
+            <ul>
+                <li id="firstValid" class="active-go" style="color: rgb(255,255,255);">1st Validation</li>
+                <li id="secondValid" class="" style="color: rgb(255,255,255);">2nd Validation</li>
+                <li id="thirdValid" class="" style="color: rgb(255,255,255);">Done</li>
+            </ul>
+        </div>
+    </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/Material-Style-Ripple-Button.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
