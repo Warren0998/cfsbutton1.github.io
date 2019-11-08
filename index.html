@@ -43,6 +43,7 @@ function copyToClipboard(element) {
   $temp.val($(element).html().replace(brRegex, "\r\n")).select();
   document.execCommand("copy");
   $temp.remove();
+  alert("Well done! template copied to your clipboard, now paste it in viber or preferred app!");
 }
 
 $( "#FailCopy" ).click(function() {
