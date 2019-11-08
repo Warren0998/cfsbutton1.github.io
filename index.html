@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 75;min-height: 75px;max-height: 75px;">
+<html style="height: 39;min-height: 39px;max-height: 39px;">
 
 <head>
     <meta charset="utf-8">
@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="assets/css/Steps-Progressbar.css">
 </head>
 
-<body style="background-color: rgba(0,123,255,0);margin-bottom: 18px;height: 70px;min-height: 70px;max-height: 70px;">
-    <div class="container text-nowrap text-center m-auto" style="background-color: #f4f9ff;margin: 12rem;margin-top: 20px;padding-top: 2;padding-bottom: 19px;" onclick="copyToClipboard('#p1')"><button class="btn btn-primary" type="button" style="padding-top: 1;margin-top: 0px;">Click Here to Copy Template &gt;</button></div>
-
+<body style="background-color: rgba(255,255,255,0);margin-bottom: 18px;height: 39px;min-height: 70px;max-height: 39px;">
 
 <center>
+<button type="button" class="btn btn-danger" onclick="copyToClipboard('#p1')"><strong>Click Here to Copy Template &gt;</strong></button>
+
 <p hidden id="p1">WIRELESS FALL-OUT REPORT:
 
  Technician Name:
@@ -37,13 +37,14 @@
 
 <script>
 function copyToClipboard(element) {
+  alert("Well done! Template copied to your clipboard, now paste it on Viber or preferred app!");
   var $temp = $("<textarea>");
   var brRegex = /<br\s*[\/]?>/gi;
   $("body").append($temp);
   $temp.val($(element).html().replace(brRegex, "\r\n")).select();
   document.execCommand("copy");
   $temp.remove();
-  alert("Well done! template copied to your clipboard, now paste it in viber or preferred app!");
+
 }
 
 $( "#FailCopy" ).click(function() {
